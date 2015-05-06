@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=name
+comment0.target=Post(java.lang.String)
+comment0.text=\r\n\ Constructor\ de\ objetos\ clase\ post\r\n\ @param\ username,\ timestamp,likes,comments\r\n
+comment1.params=
+comment1.target=void\ like()
+comment1.text=\r\n\ Aumenta\ el\ contador\ de\ likes\ en\ uno\r\n
+comment2.params=
+comment2.target=void\ unlike()
+comment2.text=\r\n\ Disminuye\ el\ contador\ de\ likes\ en\ uno.\ Si\ ya\ es\ cero\ no\ hace\ nada.\r\n
+comment3.params=text
+comment3.target=void\ addComment(java.lang.String)
+comment3.text=\r\n\ Agrega\ comentarios\ a\ los\ post\ publicados\r\n\ \r\n\ @param\ text\ El\ comentario\ que\ agregar\ al\ post\r\n
+comment4.params=
+comment4.target=long\ getTimeStamp()
+comment4.text=\r\n\ Devuelve\ el\ tiempo\ que\ ha\ pasado\ en\ milisegundos\ desde\ el\ 1\ de\ enero\r\n\ de\ 1970\ hasta\ que\ se\ creo\ el\ post\r\n\r\n\ @return\ el\ tiempo\ desde\ el\ 1\ de\ enero\ de\ 1970\ hasta\ que\ se\ creo\ el\ post.\r\n
+comment5.params=time
+comment5.target=java.lang.String\ timeString(long)
+comment5.text=\r\n\ Devuelve\ el\ tiempo\ en\ string\r\n\r\n\ @param\ tiempo\ actual\ en\ milisegundos.\r\n\ @return\ informacion\ en\ min\ y\ segundos\ del\ tiempo\ que\ ha\ transcurrido\ \r\n\ \ \ \ \ \ \ \ \ \ desde\ que\ subimos\ la\ foto\ hasta\ ahora.\r\n
+numComments=6
