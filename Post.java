@@ -91,4 +91,27 @@ public class Post
 		    tiempo += segundos + " segundos ";
 		    return tiempo;        
     	}
+    	
+    	/*
+	* Muestra por pantalla los datos del post
+	*
+	*/
+	public void display()
+	{
+		System.out.println("Autor del mensaje " + username);
+		
+		System.out.println("Me gusta " + likes);
+		System.out.println(timeString(System.currentTimeMillis()));
+		if(comments.size() == 0)
+		{
+			System.out.println( "No hay comentarios aun para este post");
+		}
+		else
+		{		   			   
+	         for( String comment : comments)
+	         {
+			System.out.println(comment);
+	         }
+	        }
+	}
 }
