@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=author\ filename\ caption
+comment0.target=PhotoPost(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ contructor\ del\ post\ de\ las\ fotos\r\n\ @param\ autor\ del\ post,filename\ nombre\ de\ la\ foto,\ caption\ pie\ de\ la\ foto\r\n
+comment1.params=
+comment1.target=void\ like()
+comment1.text=\r\n\ a\u00F1ade\ un\ me\ gusta\ a\ la\ foto\r\n
+comment2.params=
+comment2.target=void\ unlike()
+comment2.text=\r\n\ resta\ un\ me\ gusta\ al\ post\ pero\ solo\ si\ existen\ me\ gustan\r\n
+comment3.params=text
+comment3.target=void\ addComment(java.lang.String)
+comment3.text=\r\n\ a\u00F1ade\ un\ comentario\ sobre\ la\ foto\r\n\ @param\ text\ mensage\ del\ comentario\r\n
+comment4.params=
+comment4.target=java.lang.String\ getImagenFile()
+comment4.text=\r\n\ devuelve\ el\ nobre\ de\ la\ fotografia\r\n\ @return\ nombre\ de\ la\ fotografia\r\n
+comment5.params=
+comment5.target=long\ timeStamp()
+comment5.text=\r\n\ devuelve\ el\ momento\ temporal\ de\ inicio\ del\ post\r\n\ @return\ inicio\ temporal\ \r\n
+comment6.params=
+comment6.target=void\ display()
+comment6.text=\r\n\ mensaje\ con\ datos\ sobre\ la\ foto\r\n
+comment7.params=time
+comment7.target=java.lang.String\ timeString(long)
+comment7.text=\r\n\ tiempo\ desde\ que\ se\ creo\ el\ post\r\n\ @return\ mensaje\ con\ datos\ temporales\ desde\ el\ inicio\ de\ creacion\ del\ post\r\n
+numComments=8

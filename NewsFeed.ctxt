@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=NewsFeed()
+comment0.text=\r\n\ Constructor\ de\ portal\ de\ mensajes\ y\ fotos\r\n\ \r\n
+comment1.params=message
+comment1.target=void\ addMessagePost(MessagePost)
+comment1.text=\r\n\ a\u00F1adimos\ un\ mensaje\ al\ array\ \r\n\ @param\ mensaje\ de\ un\ usuario\ al\ post\r\n
+comment2.params=photo
+comment2.target=void\ addPhotoPost(PhotoPost)
+comment2.text=\r\n\ a\u00F1adimos\ una\ foto\ al\ post\r\n\ @param\ foto\ al\ post\r\n
+comment3.params=
+comment3.target=void\ show()
+comment3.text=\r\n\ nos\ muestra\ los\ mensajes\ \r\n
+numComments=4

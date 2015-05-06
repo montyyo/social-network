@@ -1,19 +1,26 @@
 #BlueJ class context
 comment0.params=author\ text
 comment0.target=MessagePost(java.lang.String,\ java.lang.String)
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ MessagePost\r\n
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ MessagePost\n\ @param\ author\ autor\ del\ comentario\n\ @param\ text\ texto\ que\ se\ introduce\ en\ el\ comentario\n
 comment1.params=
 comment1.target=void\ like()
+comment1.text=\n\ metodo\ para\ aumentar\ en\ uno\ los\ likes\ de\ nuestro\ mensaje\n\n
 comment2.params=
 comment2.target=void\ unlike()
+comment2.text=\n\ resta\ un\ like\ al\ mensaje\ ,\ pero\ solo\ si\ existen\ likes\ en\ el\ mensaje\n
 comment3.params=text
 comment3.target=void\ addComment(java.lang.String)
+comment3.text=\n\ a\u00F1ade\ un\ comentario\ al\ array\ de\ comentarios\n
 comment4.params=
 comment4.target=java.lang.String\ getText()
+comment4.text=\n\ devuelve\ el\ mensaje\ del\ post\n\ @return\ mensaje\ del\ usuario\n
 comment5.params=
 comment5.target=long\ timeStamp()
+comment5.text=\n\ tiempo\ de\ inicio\ del\ juego\n\ @return\ devuelve\ el\ momento\ temporal\ de\ inicio\ del\ mensaje\n
 comment6.params=
 comment6.target=void\ display()
+comment6.text=\n\ nos\ indica\ el\ momento\ temoral\ en\ el\ que\ se\ crea\ el\ mensaje\ desade\ el\ inicio\ del\ post\n
 comment7.params=time
 comment7.target=java.lang.String\ timeString(long)
+comment7.text=\n\ \ tiempo\ en\ milisegundos\ hace\ que\ fue\ creado\ el\ post\n\ \ @return\ min\ y\ seg\ hace\ que\ fue\ creado\ el\ mensaje\n
 numComments=8
