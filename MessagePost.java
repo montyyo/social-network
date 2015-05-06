@@ -1,113 +1,133 @@
 import java.util.ArrayList;
-/**
- * Write a description of class MessagePost here.
- * 
- * @author Marco ibañez
- * @version 1/3/5/2015
- */
+
 public class MessagePost
 {
-    //nombre del usuario
-    private String username;
-    //mensaje del usuario
-    private String message;
-    //me gustas de los mensajes
-    private int likes;
-    //control de tiempo 
-    private long  timestamp;
-    //array para guardar los comentarios
-    private ArrayList<String> comments;
+	private String username;
+	private String message;
+	private long timestamp;
+	private int likes;
+	private ArrayList<String> comments;
 
-    /**
-     * Constructor for objects of class MessagePost
-     * @param author autor del comentario
-     * @param text texto que se introduce en el comentario
-     */
-    public MessagePost(String author,String text)
-    {
-        username=author;
-        message=text;
-        comments = new ArrayList<>();
-        timestamp=System.currentTimeMillis();
-        likes=0;
-    }
+	/**
+	 * Constructor de la clase MessagePost
+	 *
+	 * @param author el nombre de usuario que crea el post
+	 * @param text el mensaje del post
+	 *
+	 **/
+	public MessagePost(String author, String text)
+	{
+		this.username = author;
+		this.message = text;
+		this.timestamp = System.currentTimeMillis();
+		this.likes = 0;
+		comments = new ArrayList<>();
+	}
 
-    /**
-     * metodo para aumentar en uno los likes de nuestro mensaje
-     *
-     */
-    public void like()
-    {
-        likes++;
-    }
-    
-    /**
-     * resta un like al mensaje , pero solo si existen likes en el mensaje
-     */
-    public void unlike()
-    {
-        if(likes > 0)
-        {
-            likes--;
-        }
-        
-       
-    }
-    
-    
-    /**
-     * añade un comentario al array de comentarios
-     */
-    public void addComment(String text)
-    {
-        comments.add(text);
-    }
-    
-    /**
-     * devuelve el mensaje del post
-     * @return mensaje del usuario
-     */
-    public String getText()
-    {
-        return message;
-    }
-    
-    /**
-     * tiempo de inicio del juego
-     * @return devuelve el momento temporal de inicio del mensaje
-     */
-    public long timeStamp()
-    {
-         
-        return timestamp;
-    }
-    
-    /**
-     * nos indica el momento temoral en el que se crea el mensaje desade el inicio del post
-     */
-    public void  display()
-    {
-       long creado = (System.currentTimeMillis()- timestamp)/1000;
-       long min= creado /60;
-       long seg=creado % 60;
-        
-        System.out.println( "\nautor del mensaje" + username + "\nmensaje: " + message+ "\nle gusta a "+ likes+
-        "\ncreado hace : " + min + " min"+ seg + " seg");
-    }
-    
-    /**
-     *  tiempo en milisegundos hace que fue creado el post
-     *  @return min y seg hace que fue creado el mensaje
-     */
-   
-    public String timeString(long time)
-    {
-       time = System.currentTimeMillis();
-       long creado = (time - timestamp)/1000;
-       long min= creado /60;
-       long seg=creado % 60;
-       
-       return "creado hace : " + min + " min " + seg+ " seg";
-        
-    }
+	/**
+	 * Aumenta el contador de likes en uno
+	 */
+	 public void like()
+	 {
+	 	likes++;
+	 }
+
+	 /**
+	  * Disminuye el contador de likes en uno. Si ya es cero no hace nada.
+	  */
+	  public void unlike()
+	  {
+	  	if(likes > 0)
+	  	{
+	  		likes--;
+	  	}
+	  }
+
+	/**
+	 * Agrega comentarios a los post publicados
+	 * 
+	 * @param text El comentario que agregar al post
+ 	 */
+	public void addComment(String text){
+		comments.add(text);
+	}
+
+	/**
+	 * Devuelve el texto del post
+	 *
+	 * @return el texto del post
+	 **/
+	public String getText()
+	{
+		return message;
+	}
+
+	/**
+	 * Devuelve el tiempo que ha pasado en milisegundos desde el 1 de enero
+	 * de 1970 hasta que se creo el post
+	 *
+	 * @return el tiempo desde el 1 de enero de 1970 hasta que se creo el post.
+	 */
+	 public long getTimeStamp()
+     {
+		return timestamp;
+     }
+
+	/*
+	* Muestra por pantalla los datos del post
+	*
+	*/
+	public void display()
+	{
+		System.out.println("Autor del mensaje " + username);
+		System.out.println("Mensaje " + message);
+		System.out.println("Me gusta " + likes);
+		System.out.println(timeString(System.currentTimeMillis()));
+		if(comments.size() == 0)
+		{
+			System.out.println( "No hay comentarios aun para este post");
+		}
+		else
+		{		   			   
+	         for( String comment : comments)
+	         {
+			System.out.println(comment);
+	         }
+	        }
+	}
+
+	/**
+     	* Devuelve el tiempo en string
+     	*
+     	* @param tiempo actual en milisegundos.
+     	* @return informacion en min y segundos del tiempo que ha transcurrido 
+     	*          desde que subimos la foto hasta ahora.
+     	*/
+    	private String timeString(long time){
+		    long diferencia = time - timestamp;
+		    int segundos = (int)diferencia/1000;
+		    int minutos = segundos/60;
+		    int horas = minutos/60;
+		    minutos -= horas*60;
+		    segundos -= minutos*60;
+		    
+		    String tiempo = " ";
+		    if(horas != 0)
+		    {
+		        tiempo += horas + " horas ";
+		    }
+		    if(minutos != 0)
+		    {
+		        tiempo += minutos + " minutos ";
+		    }
+		    tiempo += segundos + " segundos ";
+		    return tiempo;        
+    	}
 }
+
+
+
+
+
+
+

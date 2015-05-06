@@ -1,63 +1,60 @@
 import java.util.ArrayList;
-/**
- * 
- * 
- * @author (marco 
- * @version (1
- */
+
 public class NewsFeed
 {
-    //array de objetos que contiene mensajes del post
-    private ArrayList<MessagePost> messages;
-    // array de objetos que contiene datos de las fotografias
-    private ArrayList<PhotoPost> photos;
-    /**
-     * Constructor de portal de mensajes y fotos
-     * 
-     */
-    public NewsFeed()
-    {
-        messages = new ArrayList<>();
-        photos = new ArrayList<>();
-    }
+	private ArrayList<MessagePost> messages;
+	private ArrayList<PhotoPost> photos;
 
-    /**
-     * añadimos un mensaje al array 
-     * @param mensaje de un usuario al post
-     */
-    public void addMessagePost(MessagePost message)
-    {
-        messages.add(message);
-    }
+	/**
+	 * Constructor de la clase NewsFeed
+	 *
+	 **/
+	public NewsFeed(){
+		messages = new ArrayList<>();
+		photos 	= new ArrayList<>();
+   }
+   
+   /**
+    * Añade un post de texto al muro.
+    *
+    * @param message el post de texto a añadir al muro
+    **/
+   public void addMessagePost(MessagePost message)
+   {
+   	messages.add(message);
+   }
 
-    /**
-     * añadimos una foto al post
-     * @param foto al post
-     */
-    public void addPhotoPost(PhotoPost photo)
-    {
-        photos.add(photo);
-    }
+	/**
+	* Añade una post de foto al muro
+	* 
+	* @param post el post de foto a añadir al muro
+	**/
+	public void addPhotoPost(PhotoPost post)
+	{
+		photos.add(post);
+	}
 
-    /**
-     * nos muestra los mensajes 
-     */
-    public void show()
-    {
-        //para cada elemento photos se crea una var local tipo photopost llamada photo
-        // ejecutamos el cuerpo del bucle.que invoca el metodo display
-
-        //Este tipo de bucle puede recorrer cualquier clase que implemente la interfaz Iterable<E>.
-        for (PhotoPost photo: photos)
-        {
-            photo.display();  
-        }
-
-        for (MessagePost message: messages)
-        {
-            message.display();
-        }
-
-    }
-
+	/**
+	* Mostramos el tablon
+	*/
+	public void show(){
+		for (MessagePost mensaje: messages)
+		{
+		    mensaje.display();
+		}
+		
+		for (PhotoPost foto: photos)
+		{
+		    foto.display();
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
